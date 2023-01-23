@@ -17,4 +17,4 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /pub/fbruce
-            git clone https://github.com/chs-mix/cmsc389T-web-template.git
+            git clone git@github.com:chs-mix/cmsc389T-web-template.git
