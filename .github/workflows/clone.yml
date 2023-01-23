@@ -1,14 +1,13 @@
-name: clone workflow
+name: Clone Workflow
+
 on:
   workflow_dispatch:
+
 jobs:
   clone:
-    name: Clone
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v3
-
-      - name: clone
+      - name: clone 
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -16,5 +15,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /pub/fbruce
+            cd /pub/${{ secrets.USERNAME }}
             git clone git@github.com:chs-mix/cmsc389T-web-template.git
