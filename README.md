@@ -1,4 +1,4 @@
-# cmsc388T-web-template
+# Francesca Bruce Website README.md
 Made changes to (required)
 - Name
 - Profile Picture
