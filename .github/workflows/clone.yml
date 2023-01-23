@@ -1,0 +1,20 @@
+name: clone workflow
+on:
+  workflow_dispatch:
+jobs:
+  clone:
+    name: Clone
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v3
+
+      - name: testing clone to TerpConnect
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /pub/${{ secrets.USERNAME }}
+            git clone https://github.com/chs-mix/cmsc389T-web-template.git
