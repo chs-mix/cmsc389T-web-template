@@ -4,7 +4,7 @@ on:
 
 jobs:
   clone:
-    name: Update
+    name: update
     runs-on: ubuntu-latest
     steps:
     - name: update
