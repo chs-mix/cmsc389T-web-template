@@ -15,5 +15,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /pub/${{ secrets.USERNAME }}
+            cd /pub/fbruce
             git clone git@github.com:chs-mix/cmsc389T-web-template.git
